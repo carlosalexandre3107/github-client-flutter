@@ -3,7 +3,7 @@
 A new Flutter project with API Github.
 
 Repositories screen project
-![alt text](https://github.com/carlosalexandre3107/dev-quiz-flutter/blob/main/assets/images/repositories.png?raw=true)
+![alt text](https://github.com/carlosalexandre3107/github-client-flutter/blob/master/assets/images/repositories.png?raw=true)
 ## Roadmap
 - [ ] Lista de repositorios por linguagem
 - [ ] Listar pull requests
