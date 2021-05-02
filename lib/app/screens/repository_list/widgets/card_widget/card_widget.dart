@@ -5,7 +5,7 @@ class CardRepositoryWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     MediaQueryData deviceInfo = MediaQuery.of(context);
     return Padding(
-      padding: const EdgeInsets.only(bottom: 8),
+      padding: const EdgeInsets.only(bottom: 12),
       child: Container(
         height: 124,
         width: deviceInfo.size.width,
@@ -13,7 +13,12 @@ class CardRepositoryWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           color: Colors.white,
           boxShadow: [
-            BoxShadow(color: Colors.grey, spreadRadius: 1.5),
+            BoxShadow(
+              color: Colors.grey,
+              spreadRadius: 1.5,
+              blurRadius: 0.5,
+              offset: Offset.fromDirection(0.7),
+            ),
           ],
         ),
         child: Row(
@@ -29,18 +34,38 @@ class CardRepositoryWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Nome'),
+                  Text(
+                    'Nome',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    ),
+                  ),
                   Text('Login'),
-                  SizedBox(height: 16),
-                  Text('Descrição'),
+                  Text(
+                    'Mussum Ipsum, cacilds vidis litro abertis. Diuretics paradis num copo é motivis de denguis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Interagi no mé, cursus quis, vehicula ac nisi.',
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 2,
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontStyle: FontStyle.italic,
+                      fontSize: 16,
+                    ),
+                  ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Icon(Icons.star),
+                      Icon(
+                        Icons.star,
+                        color: Colors.amber,
+                      ),
                       Text('00000'),
                       Icon(Icons.device_hub),
                       Text('00000'),
-                      Icon(Icons.warning),
+                      Icon(
+                        Icons.warning,
+                        color: Colors.yellow.shade500,
+                      ),
                       Text('00000'),
                     ],
                   )
