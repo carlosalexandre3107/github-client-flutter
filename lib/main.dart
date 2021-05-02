@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'app/screens/pull_request_details/pull_request_details_screen.dart';
+import 'app/screens/pull_request_list/pull_request_list_screen.dart';
 import 'app/screens/repository_list/repository_list_screen.dart';
 
 void main() {
@@ -14,8 +16,14 @@ class GithubClientApp extends StatelessWidget {
       title: 'Github client in Flutter',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        brightness: Brightness.light,
       ),
-      home: RepositoryListScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => RepositoryListScreen(),
+        '/pull-requests': (context) => PullRequestListScreen(),
+        '/pull-request-details': (context) => PullRequestDetailsScreen(),
+      },
     );
   }
 }
