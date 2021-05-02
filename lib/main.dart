@@ -33,10 +33,7 @@ class GithubClientApp extends StatelessWidget {
   }
 
   void teste() async {
-    // final response =
-    //     await http.get(Uri.https('jsonplaceholder.typicode.com', 'albums/1'));
-    // print(jsonDecode(response.body));
-    final response = GitHubRepositoryModel.fetchAlbum(language: 'flutter');
-    print(response);
+    // final response = GitHubRepositoryModel.fetchAlbum(language: 'flutter');
+    // print(response);
   }
 }
