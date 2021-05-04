@@ -11,10 +11,15 @@ class RepositoryListScreen extends StatelessWidget {
         title: Text('Repositorios do ${this.linguagem}'),
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8),
-        child: Column(
+      body: SafeArea(
+        child: ListView(
           children: [
+            CardRepositoryWidget(),
+            CardRepositoryWidget(),
+            CardRepositoryWidget(),
+            CardRepositoryWidget(),
+            CardRepositoryWidget(),
+            CardRepositoryWidget(),
             CardRepositoryWidget(),
             CardRepositoryWidget(),
           ],
