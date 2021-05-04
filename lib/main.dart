@@ -1,12 +1,8 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 
-import 'app/models/repository/repository_model.dart';
 import 'app/screens/pull_request_details/pull_request_details_screen.dart';
 import 'app/screens/pull_request_list/pull_request_list_screen.dart';
 import 'app/screens/repository_list/repository_list_screen.dart';
-import 'package:http/http.dart' as http;
 
 void main() {
   runApp(GithubClientApp());
